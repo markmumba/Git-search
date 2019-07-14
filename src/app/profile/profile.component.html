@@ -1,0 +1,35 @@
+<div class="container">
+  <form action="" class="search-form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username"
+        name="username" (keyup)="findProfile()">
+    </div>
+  </form>
+  <div *ngIf="profile">
+    <div class="row">
+      <div class="col-md-4">
+        <h6> Profile Name :{{profile.name}} </h6>
+        <h5>Username : {{profile.login}}</h5>
+        <a href="{{profile.html_url}}" target="_blank" class="btn btn-outline-success btn-sm">View profile on github</a>
+        <hr>
+        <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+      </div>
+      <div class="col-md-8">
+        <p> <span class="label label-success">Number Of Repositories :{{profile.public_repos}}</span></p>
+
+        <h3 class="">Repositories</h3>
+        <div class="" *ngFor="let repo of repos">
+          <ul>
+            <li>
+              <p class="">
+                {{repo.name+"--"+repo.description}}
+                <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-outline-info pull-right">View this
+                  project on github</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
