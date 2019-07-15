@@ -53,4 +53,3 @@ The project is under license by MIT
 
 # Code Example
 Kindly to access code clone the repository.
-ggggkjjkjl
