@@ -10,4 +10,3 @@ export class User {
 }
 
 
-awa wasee ni ngori
