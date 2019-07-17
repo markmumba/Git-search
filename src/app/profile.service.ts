@@ -15,7 +15,7 @@ export class ProfileService {
   constructor(private http: Http) {
     // tslint:disable-next-line: quotemark
     // console.log("Service is now ready!");
-    this.username = 'emmanuelmuchiri';
+    this.username = 'markmumba';
   }
   getProfileInfo() {
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
